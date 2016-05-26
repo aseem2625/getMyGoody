@@ -1,0 +1,16 @@
+{
+  "name": "opfetch",
+  "version": "1.0.0",
+  "description": "fetch info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aseem",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^0.20.0",
+    "nodemailer": "^2.4.2",
+    "request": "^2.72.0"
+  }
+}
