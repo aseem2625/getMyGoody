@@ -21,3 +21,5 @@ But the same is compulsory if you've enabled 2-step verification in your gmail.
 I want to see Oneplus 3 through the VR headset that is available for free at oneplus website. 
 But since it's free, it gets out of stock of very soon and checking manually when it is available
 is not something that a technical person should do.
+
+![Alt text](/images/vrheadset_for_steal.png?raw=true "VR head set for OnePlus3 launch")
