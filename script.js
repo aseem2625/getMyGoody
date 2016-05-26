@@ -1,10 +1,8 @@
 var request = require('request');
 var cheerio = require('cheerio');
-
 var nodemailer = require('nodemailer');
  
 // create reusable transporter object using the default SMTP transport 
-// var transporter = nodemailer.createTransport('smtps://aseemgupta2625%40gmail.com:pass@smtp.gmail.com');
 var transporter = nodemailer.createTransport({
 service: 'Gmail',
 auth: {
@@ -13,9 +11,7 @@ auth: {
 }
 });
 
-
-
-// setup e-mail data with unicode symbols 
+/*Setup e-mail data with unicode symbols*/ 
 var mailOptions = {
     from: '"Aseem Gupta 👥" <aseem@localhost.com>', // sender address 
     to: 'aseemgupta2625@gmail.com[,more_emails_comma_separated], // list of receivers 
@@ -24,8 +20,8 @@ var mailOptions = {
     html: '<b>Hello world 🐴</b>' // html body 
 };
  
-
- function sendEmail() {
+/*Send email based on parameters*/
+function sendEmail() {
  	console.log("SENDING EMAIL");
 	// send mail with defined transport object 
 	transporter.sendMail(mailOptions, function(error, info){
@@ -36,10 +32,7 @@ var mailOptions = {
 	});
 }
 
-
-
-setInterval(requestWebsite, 600000);
-
+/*Analyze fetched html*/
 function analyzeHTML(html) {
 	var time = new Date();
 	$ = cheerio.load(html);
@@ -54,12 +47,14 @@ function analyzeHTML(html) {
 	// console.log($('.js-add-to-cart').prop('disabled', true) || $('.js-add-to-cart').is(':disabled'));
 }
 
-
+/*Fetches html from website*/
 function requestWebsite() {
-request('https://oneplus.net/oneplus-loop-vr', function (error, response, html) {
-
-	if (!error && response.statusCode == 200) {
-	analyzeHTML(html);
-	}
-});	
+	request('https://oneplus.net/oneplus-loop-vr', function (error, response, html) {
+	
+		if (!error && response.statusCode == 200) {
+		analyzeHTML(html);
+		}
+	});	
 }
+
+setInterval(requestWebsite, 600000);
