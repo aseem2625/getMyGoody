@@ -1,13 +1,13 @@
 {
-  "name": "opfetch",
+  "name": "getMyGoody",
   "version": "1.0.0",
   "description": "fetch info",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "aseem",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "cheerio": "^0.20.0",
     "nodemailer": "^2.4.2",
