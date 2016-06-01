@@ -23,3 +23,8 @@ But since it's free, it gets out of stock of very soon and checking manually whe
 is not something that a technical person should do.
 
 ![Alt text](/images/vrheadset_for_steal.png?raw=true "VR head set for OnePlus3 launch")
+
+
+#More?
+Instead of having email, you can make console beep noise using https://www.npmjs.com/package/beepbeep
+Pretty Interesting!!
